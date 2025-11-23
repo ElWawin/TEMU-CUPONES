@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUPONES Y CREDITOS GRATIS</title>
+    <meta name="description" content="Cupones y créditos Temu México • Minimalista, profesional, fondo oscuro, código INA.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #14161b;
+            --bg-card: #21242b;
+            --primary: #fd9800;
+            --primary-dark: #ec7407;
+            --primary-light: #fbfffa;
+            --grey: #26303A;
+            --success: #21ebba;
+            --shadow: 0 8px 32px 0 #01050a33;
+            --radius: 20px;
+            --font-main: #f8f7f4;
+            --font-sub: #fd9800;
+            --accent: #67e8f9;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', 'system-ui', sans-serif;
+            background: var(--bg-main);
+            color: var(--font-main);
+            min-height: 100vh;
+        }
+        .header {
+            padding: 2.6rem 0 1.5rem 0;
+            text-align: center;
+            background: var(--bg-main);
+            border-bottom: 1px solid #23253e;
+        }
+        .temu-logo-wrap {
+            width: 115px;
+            height: 70px;
+            margin: 0 auto 1.2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .temu-logo-svg {
+            width: 110px;
+            height: 60px;
+            display: block;
+        }
+        .main-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.32rem;
+            color: var(--primary);
+            letter-spacing: -1.1px;
+        }
+        .subtitle {
+            font-size: 1.09rem;
+            color: var(--white);
+            font-weight: 500;
+            margin-bottom: .6rem;
+            letter-spacing: .02em;
+            opacity: .87;
+        }
+        .tabs-bar {
+            display: flex; 
+            justify-content: center;
+            margin: 0 0 2.4rem 0;
+        }
+        .tabs-list {
+            display: flex;
+            background: var(--grey);
+            border-radius: 15px;
+            padding: .38em 1em;
+            gap: 2em;
+            box-shadow: 0 2px 14px #0014;
+        }
+        .tabs-list button {
+            min-width: 120px;
+            height: 44px;
+            background: none;
+            color: var(--font-main);
+            font-size: 1.11rem;
+            border: none;
+            border-radius: 19px;
+            font-family: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .16s, color .16s;
+            outline: none;
+            letter-spacing: .09em;
+        }
+        .tabs-list button.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 2px 28px #fd980077;
+        }
+        .tabs-list button:not(.active):hover {
+            background: #fd9800;
+            color: #fff;
+        }
+        .content-wrap {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 2.3rem 1.6rem 3.7rem 1.6rem;
+        }
+        .section-title {
+            font-size: 1.06rem;
+            color: var(--font-sub);
+            margin-bottom: 2.3rem;
+            font-weight: 700;
+            letter-spacing: .13em;
+            text-align: left;
+        }
+        .minimal-grid {
+            display: grid;
+            gap: 2.4rem 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        }
+        .card-minimal {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2.1rem 1.5rem 2.1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.2em;
+            position: relative;
+        }
+        .card-minimal .badge {
+            background: var(--primary);
+            color: #fff;
+            font-size: .92rem;
+            padding: 0.56em 1.15em;
+            border-radius: 18px;
+            font-weight: 650;
+            letter-spacing: .11em;
+            margin-bottom: 0.19em;
+        }
+        .card-minimal .title {
+            font-size: 1.20rem;
+            font-weight: bold;
+            margin-bottom: .27em;
+            letter-spacing:.06em;
+        }
+        .card-minimal .desc {
+            font-size: 1.07rem;
+            color: var(--white);
+            opacity:.81;
+            margin-bottom: .07em;
+            line-height: 1.62em;
+            font-weight: 400;
+            letter-spacing: .011em;
+        }
+        .card-minimal .expire {
+            font-size: .98em;
+            color: #ffb463b9;
+            position: absolute;
+            bottom: 1em; left: 1em;
+            font-weight: 400;
+            letter-spacing: .06em;
+        }
+        .card-minimal .actions {
+            margin-top: .10em;
+            width: 100%;
+            display: flex;
+            gap: 1.05em;
+        }
+        .Btn-Container {
+            display: flex;
+            width: 120px;
+            height: 40px;
+            background: #171f30;
+            border-radius: 50px;
+            box-shadow: 0 2px 14px #0e202299;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            transition: box-shadow .13s, background .17s;
+            font-size: .96em;
+            font-weight: 600;
+            outline: none;
+        }
+        .Btn-Container:hover {
+            box-shadow: 0 7px 34px #fd980077;
+            background: #fd9800;
+        }
+        .icon-Container {
+            width: 28px;
+            height: 28px;
+            background: #ffe9b3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 0;
+            margin-left: .16em;
+        }
+        .text {
+            width: 67px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            color: white;
+            font-size: .99em;
+            letter-spacing: .5px;
+            font-weight: 500;
+            margin-left:.4em;
+        }
+        .icon-Container svg {
+            transition-duration: .85s;
+        }
+        .Btn-Container:hover .icon-Container svg {
+            animation: arrow .7s linear infinite;
+        }
+        @keyframes arrow {
+            0% {opacity:0;margin-left:0px;}
+            100% {opacity:1;margin-left:7px;}
+        }
+        .reveal-area {
+            display:none;
+            align-items:center;
+            justify-content:center;
+            height:38px;
+            width:100%;
+            margin-top:.13em;
+        }
+        .code-anim {
+            display: none;
+            background: #191a2a;
+            padding: .81em 1em;
+            border-radius: 11px;
+            text-align: center;
+            font-family: 'Fira Mono', 'Courier New', monospace;
+            font-size: 1.15em;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            user-select: all;
+            font-weight: 700;
+            animation: codePop .9s cubic-bezier(.46,1.18,.44,.95);
+        }
+        @keyframes codePop {
+            0% {opacity:0; transform:scale(.7);}
+            50% {opacity:.8; transform:scale(1.04);}
+            70% {opacity:1; transform:scale(0.96);}
+            100% {opacity:1; transform:scale(1);}
+        }
+        .btn-copy-code {
+            padding: .22em .78em;
+            font-size: 1em;
+            border-radius: 5px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: .58em;
+            margin-top: .11em;
+            transition: background .11s;
+        }
+        .btn-copy-code:active,
+        .btn-copy-code.copied {
+            background: var(--success);
+        }
+        .balls {
+            width: 1.55em;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; gap: .13em;
+        }
+        .balls div {width:.39em;height:.39em;border-radius:50%;background-color:#fd9800;}
+        .balls div:nth-of-type(1) {transform:translateX(-100%);animation:left-swing .32s ease-in alternate infinite;}
+        .balls div:nth-of-type(3) {transform:translateX(-95%);animation:right-swing .32s ease-out alternate infinite;}
+        @keyframes left-swing {50%,100%{transform:translateX(98%);}}
+        @keyframes right-swing {50%{transform:translateX(-95%);}100%{transform:translateX(105%);}}
+        .stats-bar {
+            margin: 2rem auto 3.5rem auto;
+            max-width: 700px;
+            background: linear-gradient(90deg,var(--bg-card) 70%,var(--primary) 130%);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 2.2em;
+            box-shadow: 0 2px 14px #0e202299;
+            padding: 1.3em;
+        }
+        .stats-bar .stat {
+            text-align: center;
+        }
+        .stat-num {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: .02em;
+        }
+        .stat-desc {
+            color: var(--white);
+            font-size: 0.92em;
+        }
+        .floating-alert {
+            position: fixed;
+            top: 17px;
+            right: 17px;
+            z-index: 1000;
+            display: none;
+            font-size: .99em;
+            background:var(--success);color:#111;
+            padding:8px 19px;font-weight:600;border-radius:10px;
+            box-shadow: var(--shadow);
+        }
+        @media (max-width:700px) {
+            .main-title {font-size: 1.11rem;}
+            .content-wrap {padding: 1rem .13rem 1.6rem .13rem;}
+            .minimal-grid {grid-template-columns: 1fr;gap: 1.39rem;}
+            .tabs-list {padding:.13em 0.1em;gap:.65em;}
+            .tabs-list button {min-width: 90px; font-size: .96rem;}
+            .stats-bar {flex-direction: column;gap:1.2em;}
+            .section-title {margin-bottom: 1.1rem;font-size:1.02rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="temu-logo-wrap">
+            <!-- Temu logo SVG profesional, moderno, naranja -->
+            <svg class="temu-logo-svg" viewBox="0 0 180 60" fill="none">
+              <rect x="0" y="0" width="180" height="60" rx="30" fill="#fff"/>
+              <text x="50%" y="54%" text-anchor="middle" dy=".35em" font-family="Montserrat,Sans-serif" font-size="37" font-weight="bold" fill="#fd9800">TEMU</text>
+              <circle cx="25" cy="48" r="6" fill="#fd9800"/>
+              <rect x="38" y="43" width="10" height="10" rx="2" fill="#fd9800"/>
+              <ellipse cx="154" cy="48" rx="7" ry="4.2" fill="#fd9800"/>
+            </svg>
+        </div>
+        <div class="main-title">CUPONES Y CREDITOS GRATIS</div>
+        <div class="subtitle">Descuentos exclusivos para Temu México</div>
+        <nav class="tabs-bar">
+            <div class="tabs-list">
+                <button id="tab-cupones" class="active" type="button" onclick="switchTab('cupones')">CUPONES</button>
+                <button id="tab-credits" type="button" onclick="switchTab('credits')">FREE CREDITS</button>
+            </div>
+        </nav>
+    </div>
+    <div class="stats-bar">
+        <div class="stat"><div class="stat-num">+9,200</div><div class="stat-desc">Cupones usados este mes</div></div>
+        <div class="stat"><div class="stat-num">97.9%</div><div class="stat-desc">Tasa éxito</div></div>
+        <div class="stat"><div class="stat-num">+6,850</div><div class="stat-desc">Usuarios felices</div></div>
+    </div>
+    <div class="content-wrap">
+        <!-- Cupones -->
+        <div id="cupones-section">
+          <div class="section-title">Cupones</div>
+          <div class="minimal-grid">
+            <div class="card-minimal">
+                <div class="badge">Bienvenida</div>
+                <div class="title">Cupón $250 primer pedido</div>
+                <div class="desc">Exclusivo para nuevos usuarios en Temu. Solo aplica una vez.</div>
+                <div class="actions">
+                  <button class="Btn-Container" onclick="showCode(this)">
+                    <span class="text">SHOW</span>
+                    <span class="icon-Container">
+                      <svg width="15" height="17" viewBox="0 0 16 19"><circle cx="1.6" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="9.5" r="1.3" fill="black"/><circle cx="14.0" cy="9.5" r="1.3" fill="black"/><circle cx="5.7" cy="13.4" r="1.3" fill="black"/><circle cx="9.9" cy="13.4" r="1.3" fill="black"/><circle cx="1.6" cy="17.4" r="1.3" fill="black"/><circle cx="5.7" cy="17.4" r="1.3" fill="black"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="reveal-area"><div class="balls"><div></div><div></div><div></div></div></div>
+                <div class="code-anim"><span>INA965363</span><button class="btn-copy-code" onclick="event.stopPropagation();copyCode(this,'INA965363');">COPIAR</button></div>
+                <div class="expire">Válido hasta: 30-Nov-2025</div>
+            </div>
+            <div class="card-minimal">
+                <div class="badge">20% Extra</div>
+                <div class="title">Usa 20% de descuento adicional</div>
+                <div class="desc">Aplica a todo el catálogo de Temu México.</div>
+                <div class="actions">
+                  <button class="Btn-Container" onclick="showCode(this)">
+                    <span class="text">SHOW</span>
+                    <span class="icon-Container">
+                      <svg width="15" height="17" viewBox="0 0 16 19"><circle cx="1.6" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="9.5" r="1.3" fill="black"/><circle cx="14.0" cy="9.5" r="1.3" fill="black"/><circle cx="5.7" cy="13.4" r="1.3" fill="black"/><circle cx="9.9" cy="13.4" r="1.3" fill="black"/><circle cx="1.6" cy="17.4" r="1.3" fill="black"/><circle cx="5.7" cy="17.4" r="1.3" fill="black"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="reveal-area"><div class="balls"><div></div><div></div><div></div></div></div>
+                <div class="code-anim"><span>INA965363</span><button class="btn-copy-code" onclick="event.stopPropagation();copyCode(this,'INA965363');">COPIAR</button></div>
+                <div class="expire">Expira: 29-Nov-2025</div>
+            </div>
+            <div class="card-minimal">
+                <div class="badge">Rapido</div>
+                <div class="title">$100 MXN instantáneo</div>
+                <div class="desc">Para tu primer compra o productos seleccionados.</div>
+                <div class="actions">
+                  <button class="Btn-Container" onclick="showCode(this)">
+                    <span class="text">SHOW</span>
+                    <span class="icon-Container">
+                      <svg width="15" height="17" viewBox="0 0 16 19"><circle cx="1.6" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="9.5" r="1.3" fill="black"/><circle cx="14.0" cy="9.5" r="1.3" fill="black"/><circle cx="5.7" cy="13.4" r="1.3" fill="black"/><circle cx="9.9" cy="13.4" r="1.3" fill="black"/><circle cx="1.6" cy="17.4" r="1.3" fill="black"/><circle cx="5.7" cy="17.4" r="1.3" fill="black"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="reveal-area"><div class="balls"><div></div><div></div><div></div></div></div>
+                <div class="code-anim"><span>INA965363</span><button class="btn-copy-code" onclick="event.stopPropagation();copyCode(this,'INA965363');">COPIAR</button></div>
+                <div class="expire">Expira: 01-Dic-2025</div>
+            </div>
+          </div>
+        </div>
+        <!-- Créditos Gratis -->
+        <div id="credits-section" style="display:none;">
+          <div class="section-title">Créditos gratis</div>
+          <div class="minimal-grid">
+            <div class="card-minimal">
+                <div class="badge">100 CREDITOS</div>
+                <div class="title">Consigue 100 créditos gratis</div>
+                <div class="desc">Saldo gratis para Temu México, sin requisitos.</div>
+                <div class="actions">
+                  <button class="Btn-Container" onclick="showCode(this)">
+                    <span class="text">SHOW</span>
+                    <span class="icon-Container">
+                      <svg width="15" height="17" viewBox="0 0 16 19"><circle cx="1.6" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="9.5" r="1.3" fill="black"/><circle cx="14.0" cy="9.5" r="1.3" fill="black"/><circle cx="5.7" cy="13.4" r="1.3" fill="black"/><circle cx="9.9" cy="13.4" r="1.3" fill="black"/><circle cx="1.6" cy="17.4" r="1.3" fill="black"/><circle cx="5.7" cy="17.4" r="1.3" fill="black"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="reveal-area"><div class="balls"><div></div><div></div><div></div></div></div>
+                <div class="code-anim"><span>INA965363</span><button class="btn-copy-code" onclick="event.stopPropagation();copyCode(this,'INA965363');">COPIAR</button></div>
+            </div>
+            <div class="card-minimal">
+                <div class="badge">200 CREDITOS</div>
+                <div class="title">Gana 200 créditos gratis</div>
+                <div class="desc">Bonificación especial Temu México.</div>
+                <div class="actions">
+                  <button class="Btn-Container" onclick="showCode(this)">
+                    <span class="text">SHOW</span>
+                    <span class="icon-Container">
+                      <svg width="15" height="17" viewBox="0 0 16 19"><circle cx="1.6" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="1.6" r="1.3" fill="black"/><circle cx="5.7" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="5.6" r="1.3" fill="black"/><circle cx="9.9" cy="9.5" r="1.3" fill="black"/><circle cx="14.0" cy="9.5" r="1.3" fill="black"/><circle cx="5.7" cy="13.4" r="1.3" fill="black"/><circle cx="9.9" cy="13.4" r="1.3" fill="black"/><circle cx="1.6" cy="17.4" r="1.3" fill="black"/><circle cx="5.7" cy="17.4" r="1.3" fill="black"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="reveal-area"><div class="balls"><div></div><div></div><div></div></div></div>
+                <div class="code-anim"><span>INA965363</span><button class="btn-copy-code" onclick="event.stopPropagation();copyCode(this,'INA965363');">COPIAR</button></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="floating-alert alert alert-success" role="alert" id="copyAlert">
+      ¡Código copiado!
+    </div>
+<script>
+    function switchTab(tab) {
+        let tabCupones = document.getElementById('tab-cupones');
+        let tabCredits = document.getElementById('tab-credits');
+        let secCupones = document.getElementById('cupones-section');
+        let secCredits = document.getElementById('credits-section');
+        if(tab==='cupones') {
+            tabCupones.classList.add('active');
+            tabCredits.classList.remove('active');
+            secCupones.style.display = "block";
+            secCredits.style.display = "none";
+        } else {
+            tabCupones.classList.remove('active');
+            tabCredits.classList.add('active');
+            secCupones.style.display = "none";
+            secCredits.style.display = "block";
+        }
+    }
+    function showCode(btn) {
+        var card = btn.closest('.card-minimal');
+        var reveal = card.querySelector('.reveal-area');
+        var code = card.querySelector('.code-anim');
+        reveal.style.display = "flex";
+        code.style.display = "none";
+        setTimeout(function(){
+            reveal.style.display = "none";
+            code.style.display = "block";
+            code.style.animation = "codePop .9s cubic-bezier(.46,1.18,.44,.95)";
+            code.scrollIntoView({behavior:'smooth', block:'center'});
+        }, 900);
+    }
+    function copyCode(btn, code){
+        navigator.clipboard.writeText(code);
+        btn.textContent = "¡Copiado!";
+        document.getElementById('copyAlert').style.display = "block";
+        setTimeout(function() {
+            btn.textContent = "COPIAR";
+            document.getElementById('copyAlert').style.display = "none";
+            btn.classList.remove('copied');
+        }, 1100);
+    }
+</script>
+</body>
+</html>
